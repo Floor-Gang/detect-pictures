@@ -1,15 +1,16 @@
 package internal
 
 import (
-	utilConfig "github.com/Floor-Gang/utilpkg/config"
 	"log"
+
+	utilConfig "github.com/Floor-Gang/utilpkg/config"
 )
 
 // Config structure.
 type Config struct {
-	Auth                string        `yaml:"auth_server"` // authserver ip and port
-	Prefix              string        `yaml:"prefix"`      // prefix associated with this bot
-	NotificationChannel string        `yaml:"NotificationChannel"`     // channel to report to
+	Auth                string `yaml:"auth_server"`         // authserver ip and port
+	Prefix              string `yaml:"prefix"`              // prefix associated with this bot
+	NotificationChannel string `yaml:"NotificationChannel"` // channel to report to
 }
 
 const configPath = "./config.yml"
@@ -18,7 +19,7 @@ const configPath = "./config.yml"
 func GetConfig() Config {
 	config := Config{
 		Auth:                "",
-		Prefix:              ".stop_redirect",
+		Prefix:              ".pic_only",
 		NotificationChannel: "",
 	}
 	err := utilConfig.GetConfig(configPath, &config)

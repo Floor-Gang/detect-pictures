@@ -1,4 +1,4 @@
-module github.com/Floor-Gang/init-discord-bot
+module github.com/Floor-Gang/detect-pictures
 
 go 1.14
 
